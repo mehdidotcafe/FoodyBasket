@@ -1,4 +1,4 @@
-Word famous game finally open-sourced!.
+World famous game finally open-sourced!
 
 Update variables in config.lua before starting the project.
 
