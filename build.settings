@@ -1,0 +1,66 @@
+--
+-- For more information on build.settings see the Corona SDK Build Guide at:
+-- https://docs.coronalabs.com/guide/distribution/buildSettings
+--
+
+settings =
+{
+	plugins =
+	{
+		["plugin.google.iap.billing.v2"] =
+		{
+				publisherId = "com.solar2d"
+		},
+	},
+
+	orientation =
+	{
+		-- Supported values for orientation:
+		-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+
+		default = "landscapeRight",
+		supported = { "landscapeLeft", "landscapeRight" }
+	},
+
+	excludeFiles =
+	{
+		-- Include only the necessary icon files on each platform
+		iphone = { "Icon-*dpi.png", },
+		android = { "Icon.png", "Icon-Small-*.png", "Icon*@2x.png", },
+	},
+
+	--
+	-- iOS Section
+	--
+	iphone =
+	{
+		xcassets = "Images.xcassets",
+		plist =
+		{
+			UILaunchStoryboardName = "LaunchScreen",
+			UIStatusBarHidden = false,
+			UIPrerenderedIcon = true, -- set to false for "shine" overlay
+			--UIApplicationExitsOnSuspend = true, -- uncomment to quit app on suspend
+		},
+	},
+
+	--
+	-- Android Section
+	--
+	android =
+	{
+		usesPermissions =
+		{
+			"android.permission.INTERNET",
+			"com.android.vending.BILLING",
+		},
+	},
+
+	window = {
+		defaultMode  = "fullscreen",
+		 resizable = false,
+		 titleText = {
+		 default = "Foody Basket",
+		 }
+	}
+}
