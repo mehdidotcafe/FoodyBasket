@@ -28,9 +28,6 @@ function scene:create(event)
   pm:init()
   sm:init()
 
-
-  pm:incrScore(9999999)
-
   s:load(#pm.buyablePoints)
 
   local function epilogue()
